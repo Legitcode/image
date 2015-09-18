@@ -3,9 +3,20 @@ import Image from '../src/image';
 
 export default class Basic extends React.Component {
 
+  constructor(){
+    super()
+    this.state = {
+      image: 'http://cdn.meme.am/instances/500x/59395405.jpg'
+    }
+  }
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({image: 'http://img3.goodfon.su/original/8560x5608/a/fc/nature-spring-mountain-house-2549.jpg'})
+    }, 2000)
+  }
   render() {
     return (
-      <Image src="http://facebook.github.io/react/img/logo.svg" />
+      <Image src={this.state.image} />
     );
   }
 }

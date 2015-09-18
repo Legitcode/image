@@ -13,6 +13,10 @@ export default class Image extends React.Component{
     this.setState({opacity: 1})
   }
 
+  componentWillReceiveProps(props){
+    if(props.src != this.props.src) this.setState({opacity: 0})
+  }
+
   render(){
     //this vs including an Object.assign polyfill
     let style = this.props.style || {}
