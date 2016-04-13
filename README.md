@@ -1,3 +1,4 @@
+[![Circle CI](https://circleci.com/gh/Legitcode/image.svg?style=svg)](https://circleci.com/gh/Legitcode/image)
 ##Install
 `npm install legit-image`
 
