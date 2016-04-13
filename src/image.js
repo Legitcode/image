@@ -7,9 +7,10 @@ export default class Image extends React.Component{
     this.state = {
       opacity: 0
     }
+    this.fadeIn = this.fadeIn.bind(this)
   }
 
-  fadeIn = () =>{
+  fadeIn() {
     this.setState({opacity: 1})
   }
 
