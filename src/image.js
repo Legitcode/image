@@ -1,21 +1,16 @@
 import React from 'react'
 
-export default class Image extends React.Component{
+export default class Image extends React.Component {
 
-  constructor(){
+  constructor({ src }){
     super()
-    this.state = {
-      opacity: 0
-    }
-    this.fadeIn = this.fadeIn.bind(this)
-  }
+    let opacity = 0
+    if(!src.match(/http/)) opacity = 1
 
-  fadeIn() {
-    this.setState({opacity: 1})
+    this.state = { opacity }
   }
 
   render(){
-    //this vs including an Object.assign polyfill
     let style = this.props.style || {}
     style.transition = `opacity ${this.props.speed || 1}s`
     style.opacity = this.state.opacity
@@ -25,8 +20,10 @@ export default class Image extends React.Component{
         {...this.props}
         style={style}
         src={this.props.src}
-        onLoad={this.fadeIn}
+        onLoad={() => this.setState({opacity: 1})}
       />
     )
   }
 }
+
+
