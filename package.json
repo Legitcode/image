@@ -1,6 +1,6 @@
 {
   "name": "legit-image",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "an img tag, with built in lazy loading",
   "main": "lib/image.js",
   "scripts": {
