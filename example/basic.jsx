@@ -1,4 +1,5 @@
 import React from 'react';
+import { render } from 'react-dom'
 import Image from '../src/image';
 
 export default class Basic extends React.Component {
@@ -10,4 +11,4 @@ export default class Basic extends React.Component {
   }
 }
 
-React.render(<Basic />, document.getElementById('react'));
+render(<Basic />, document.getElementById('react'));
