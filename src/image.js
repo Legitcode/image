@@ -5,7 +5,7 @@ export default class Image extends React.Component {
   constructor({ src }){
     super()
     let opacity = 0
-    if(!src.match(/http/)) opacity = 1
+    if(!src.match(/http/) || typeof window === 'undefined') opacity = 1
 
     this.state = { opacity }
   }
